@@ -4,29 +4,32 @@ import FillingForm from "./FillingForm";
 import ToppingForm from "./ToppingForm";
 import SideForm from "./SideForm";
 
-const DEFAULT_STATE = {
-  protein: [],
-  fillings: [],
-  toppings: [],
-  sides: [],
-};
-
-function Form() {
+function Form(props) {
+  const DEFAULT_STATE = {
+    protein: [],
+    fillings: [],
+    toppings: [],
+    sides: [],
+  };
   const [formState, setFormState] = useState(DEFAULT_STATE);
 
-  function handleSubmit() {
+  console.log(formState);
+
+  function handleSubmit(event) {
     event.preventDefault();
-    props.addOrder(formState);
 
     setFormState({
       ...DEFAULT_STATE,
     });
+
+    props.addOrder(formState);
     event.target.reset();
   }
 
-  function handleChange() {
+  function handleChange(event) {
     const itemType = event.target.name;
     const item = event.target.value;
+    console.log(item, itemType);
 
     if (formState[itemType].includes(item)) {
       setFormState({

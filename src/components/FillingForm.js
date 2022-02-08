@@ -19,8 +19,8 @@ function FillingForm(props) {
               type="checkbox"
               value="White Rice"
               name="fillings"
-              checked={props.fillings.includes("White Rice")}
-              onChange={props.handleChange}
+              defaultChecked={props.fillings.includes("White Rice")}
+              onChange={props.handleOnChange}
             />
             <img
               src={whiteRice}
@@ -39,8 +39,8 @@ function FillingForm(props) {
               type="checkbox"
               value="Brown Rice"
               name="fillings"
-              checked={props.fillings.includes("Brown Rice")}
-              onChange={props.handleChange}
+              defaultChecked={props.fillings.includes("Brown Rice")}
+              onChange={props.handleOnChange}
             />
             <img
               src={brownRice}
@@ -59,8 +59,8 @@ function FillingForm(props) {
               type="checkbox"
               value="Black Beans"
               name="fillings"
-              checked={props.fillings.includes("Black Beans")}
-              onChange={props.handleChange}
+              defaultChecked={props.fillings.includes("Black Beans")}
+              onChange={props.handleOnChange}
             />
             <img
               src={blackBeans}
@@ -79,8 +79,8 @@ function FillingForm(props) {
               type="checkbox"
               value="Pinto Beans"
               name="fillings"
-              checked={props.fillings.includes("Pinto Beans")}
-              onChange={props.handleChange}
+              defaultChecked={props.fillings.includes("Pinto Beans")}
+              onChange={props.handleOnChange}
             />
             <img
               src={pintoBeans}
@@ -99,8 +99,8 @@ function FillingForm(props) {
               type="checkbox"
               value="Fajita Veggies"
               name="fillings"
-              checked={props.fillings.includes("Fajita Veggies")}
-              onChange={props.handleChange}
+              defaultChecked={props.fillings.includes("Fajita Veggies")}
+              onChange={props.handleOnChange}
             />
             <img
               src={fajitaVeg}
